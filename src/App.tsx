@@ -15,7 +15,7 @@ function App() {
   const [user, setUser] =useState<userData | null>(null);
 
   const fetchUser = () =>{
-    fetch('http://127.0.0.1:5000/api/name')
+    fetch('https://weatherapi-9zin.onrender.com/api/name') //http://127.0.0.1:5000/api/name
     .then((response) => (response.json()))
     .then((data) =>{
       setUser(data)
@@ -33,7 +33,7 @@ function App() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
 
   const fetchWeather = () =>{
-    fetch("http://127.0.0.1:5000/api/weather")
+    fetch("https://weatherapi-9zin.onrender.com/api/weather")//http://127.0.0.1:5000/api/weather
     .then((response) => response.json())
     .then((data) =>{
       setWeather(data);
